@@ -1,0 +1,25 @@
+<div class="container-height" fxLayout="column" fxLayoutAlign="center center">
+  <mat-card class="example-card">
+    <mat-card-content>
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="First Name" [value]="user.data.firstName" disabled="true">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Last Name" [value]="user.data.lastName" disabled="true">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="E-mail" [value]="user.data.email" disabled="true">
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="logOut()">Log out</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+  <div class="center-align">
+    <app-event-card class="inLine-list"
+                    [event]="event"
+                    (addReservation)="reservationAlert()"
+                    *ngFor="let event of userEvents">
+    </app-event-card>
+  </div>
+</div>

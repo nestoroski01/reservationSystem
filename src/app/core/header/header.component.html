@@ -1,0 +1,8 @@
+<div class="header">
+  <div *ngIf="user">
+    <a routerLink="/profile">{{user.firstName}} {{user.lastName}}</a>
+  </div>
+  <div *ngIf="!user">
+    <a routerLink="/login">Please Login</a>
+  </div>
+</div>

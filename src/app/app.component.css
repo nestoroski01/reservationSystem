@@ -1,0 +1,16 @@
+app-sidemenu {
+    position: absolute;
+    float: left;
+    height: 100%;
+    z-index: 2;
+}
+
+app-header{
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+routing-outlet{
+    position: absolute;
+}

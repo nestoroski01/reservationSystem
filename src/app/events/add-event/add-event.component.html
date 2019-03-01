@@ -1,0 +1,70 @@
+<div class="container-height" fxLayout="column" fxLayoutAlign="center center">
+    <mat-card class="example-card">
+      <mat-card-content>
+          <input #imageInput  type="file" 
+                              id="imageInput"
+                              accept="image/*"
+                              class="hide-input"
+                              (change)="onImageUpload($event)">
+          <img mat-card-image src="{{selectedImage}}"
+                              alt="placeholder-image"
+                              (click)="imageInput.click()">
+
+        <form class="example-form" [formGroup]="addEventForm">
+          <mat-form-field class="example-full-width">
+            <input matInput formControlName="title" placeholder="Title">
+            <mat-hint>{{titleMessage}}</mat-hint>
+          </mat-form-field>
+          <div formGroupName="dateGroup">
+            <mat-form-field class="example-half-width">
+              <input matInput      
+                     placeholder="Start"
+                     formControlName="dtStart"
+                     [owlDateTime]="dtStart"
+                     [owlDateTimeTrigger]="dtStart">
+            <mat-hint>{{dtStartMessage}}</mat-hint>                     
+            <owl-date-time #dtStart></owl-date-time>
+            <mat-icon matSuffix
+                      color="primary"
+                      [owlDateTimeTrigger]="dtStart">calendar_today</mat-icon>
+            </mat-form-field>
+            <mat-form-field class="example-half-width" style="float: right">
+              <input matInput
+                     placeholder="End"
+                     formControlName="dtEnd"
+                     [owlDateTime]="dtEnd"
+                     [owlDateTimeTrigger]="dtEnd">
+            <mat-hint>{{dtEndMessage}}</mat-hint>
+            <owl-date-time #dtEnd></owl-date-time>
+            <mat-icon matSuffix
+                      color="primary"
+                      [owlDateTimeTrigger]="dtEnd">calendar_today</mat-icon>
+            </mat-form-field>
+          </div>
+          <mat-form-field class="example-full-width">
+            <textarea matInput
+            placeholder="Description"
+            formControlName="description"></textarea>
+            <mat-hint>{{descriptionMessage}}</mat-hint>            
+          </mat-form-field>
+          <mat-form-field class="example-half-width">
+            <input matInput formControlName="capacity" placeholder="Capacity">
+            <mat-hint>{{capacityMessage}}</mat-hint>            
+          </mat-form-field>
+          <button mat-icon-button
+                  class="example-half-width"
+                  style="float: right;"
+                  color="primary"
+                  type="button">
+                  <mat-icon>place</mat-icon>
+                  Location
+          </button>
+          <button mat-raised-button
+                  class="example-full-width"
+                  color="primary"
+                  [disabled]="!addEventForm.valid"
+                  (click)="addEvent()">Add Event</button>
+        </form>
+      </mat-card-content>
+    </mat-card>   
+  </div>

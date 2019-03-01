@@ -1,0 +1,10 @@
+<div class="sidemenu" (mouseenter)="toggleShowText()" (mouseleave)="toggleShowText()">
+  <mat-list>
+    <app-list-item *ngFor="let page of pages"
+                   [text]="page.text"
+                   [icon]="page.icon"
+                   [showText]="showText" 
+                   [link]="page.link">
+    </app-list-item>
+  </mat-list>
+</div>

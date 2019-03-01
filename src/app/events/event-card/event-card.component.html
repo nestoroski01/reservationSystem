@@ -1,0 +1,17 @@
+<mat-card class="example-card">
+  <img mat-card-image [src]="event.data.image" alt="event-image">
+  <h2>
+    {{event.data.title}}
+  </h2>
+  <mat-card-content>
+    <p>
+      {{event.data.description}}
+    </p>
+    <h4>
+      Capacity: {{event.data.capacity}}
+    </h4>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-flat-button color="primary" class="fullWidth" (click)="emitAddReservation()">Reserve a seat!</button>
+  </mat-card-actions>
+</mat-card>

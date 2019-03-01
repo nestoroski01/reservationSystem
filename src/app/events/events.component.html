@@ -1,0 +1,16 @@
+<div class="container-height"  fxLayout="column" fxLayoutAlign="start stretch" >
+  <!-- <div class="news">
+
+  </div> -->
+  <mat-tab-group mat-stretch-tabs class="tabs mat-elevation-z4" (selectedTabChange)="onTabChange($event)">
+    <mat-tab *ngFor="let day of week" label="{{day | date : 'EE, d'}}">
+      <div class="center-align">
+        <app-event-card class="inLine-list"
+                        [event]="event"
+                        (addReservation)="addReservation($event)"
+                        *ngFor="let event of todayEvents"></app-event-card>
+
+        </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>

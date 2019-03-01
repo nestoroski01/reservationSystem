@@ -1,0 +1,27 @@
+.container-height{
+    height: 120%;
+    background-color: #272424
+}
+.example-card {
+    max-width: 600px;
+}
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+.example-full-width {
+    width: 100%;
+}
+.mat-raised-button {
+    width: 100%;
+}
+.inLine-list {
+    margin-top: 20px;
+    margin-right: 20px;
+    display: inline-block;
+    width: 300px;
+  }
+  .center-align {
+    text-align: center;
+  }

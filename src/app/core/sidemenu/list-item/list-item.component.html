@@ -1,0 +1,8 @@
+<mat-list-item>
+
+    <button mat-icon-button [routerLink]="[link]">
+        <mat-icon matListIcon [color]="'primary'">{{icon}}</mat-icon>
+    </button>
+    <a *ngIf="showText" [@showTitle] [routerLink]="[link]"> {{text}} </a>
+
+</mat-list-item>

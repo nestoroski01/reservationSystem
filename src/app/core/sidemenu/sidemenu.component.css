@@ -1,0 +1,9 @@
+.sidemenu {
+    height: 100%;
+    width: min-content;
+    background-color: #444444;
+}
+.mat-list {
+    padding-top: 50px;    
+    height: 100%;
+}

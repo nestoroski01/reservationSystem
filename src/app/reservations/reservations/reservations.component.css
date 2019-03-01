@@ -1,0 +1,53 @@
+.container-height{
+    height: 100%;
+    background-color: #272424
+}
+.example-card {
+    width: 500px;
+}
+mat-list-item {
+    width: 100%;
+    padding: 10px;
+}
+h1 {
+    margin-bottom: 0px;
+    font-size: 1em;
+}
+h2 {
+    color: white;
+    font-size: 1.2em;
+    font-weight: 400;
+    float: right;
+    text-align: right;
+}
+p {
+   font-size: 0.7em;
+   color: #C2185B;   
+}
+.mat-mini-fab {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: 2px solid #C2185B;
+    box-shadow: 0;
+    margin-left: 5px;
+}
+.mat-mini-fab:not {
+    box-shadow: 0;
+}
+.material-icons {
+    line-height: 10px;
+}
+.side-buttons {
+    float: right;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    position: absolute;
+    right: 0%;
+}
+.mat-list-avatar {
+    width: 45px;
+    height: 45px;
+    margin-inline-end: 10px;
+    margin-bottom: 20px;
+}

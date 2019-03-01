@@ -1,0 +1,28 @@
+<div class="container-height" fxLayout="column" fxLayoutAlign="center center">
+    <mat-card class="example-card">
+      <mat-card-content>
+        <mat-list>
+            <mat-list-item *ngFor="let reservation of reservations">
+              <img matListAvatar [src]="reservation.data.guest.data.profilePicture" alt="...">
+              <div>
+                <h1>{{reservation.data.guest.data.firstName}} {{reservation.data.guest.data.lastName}}</h1>
+                <p>{{reservation.data.dateReserved | date: 'fullDate'}}</p>
+              </div>
+              <div class="side-buttons">
+                <button mat-mini-fab (click)="approveReservation()">
+                  <mat-icon color="primary">done</mat-icon>
+                </button>
+                <button mat-mini-fab (click)="rejectReservation(reservation)">
+                    <mat-icon color="primary">clear</mat-icon>
+                </button>
+              </div>
+            </mat-list-item>
+            <mat-list-item class="last-cell">
+              <h2>
+                Total Reservations: {{reservations.length}}
+              </h2>
+            </mat-list-item>
+          </mat-list>
+      </mat-card-content>
+    </mat-card>
+  </div>

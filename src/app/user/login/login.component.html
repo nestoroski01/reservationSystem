@@ -1,0 +1,20 @@
+<div class="container-height" fxLayout="column" fxLayoutAlign="center center">
+  <mat-card class="example-card">
+    <mat-card-content>
+      <button mat-raised-button class="facebook-button" (click)="loginWithFb()">Login with Facebook</button>
+      <h1>OR</h1>
+      <form class="example-form" [formGroup]="loginForm">
+        <mat-form-field class="example-full-width">
+          <input matInput formControlName="email" placeholder="Email">
+          <mat-hint>{{emailMessage}}</mat-hint>          
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input matInput formControlName="password" placeholder="Password" type="password">
+          <mat-hint>{{passwordMessage}}</mat-hint>
+        </mat-form-field>
+        <button mat-raised-button color="primary" [disabled]="!loginForm.valid" (click)="login()">Login</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+  <a id="register" [routerLink]="['/register']">Sign up for an account</a>
+</div>
